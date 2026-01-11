@@ -6,123 +6,221 @@
     <title>Document</title>
 </head>
 <body>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>La Famille Cesar</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
-            color: #fff;
-            text-align: center;
-            line-height: 1.6;
-        }
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+   <!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>La Famille Cesar</title>
+<style>
+/* === Styles généraux === */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #fff;
+    text-align: center;
+    line-height: 1.6;
+    overflow-x: hidden;
+    animation: bgShift 25s linear infinite;
+}
 
-        header {
-            background: linear-gradient(90deg, #8b0000, #000);
-            padding: 40px 20px;
-            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
-        }
+@keyframes bgShift {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
 
-        h1 {
-            font-size: 50px;
-            margin: 0;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px 8px #ff0000;
-        }
+header {
+    background: linear-gradient(90deg, #b30000, #330000);
+    padding: 50px 20px;
+    box-shadow: 0 5px 25px rgba(255, 0, 0, 0.7);
+    position: relative;
+}
 
-        h2 {
-            color: #ff4444;
-            margin-top: 15px;
-            text-shadow: 1px 1px 5px #ff0000;
-        }
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background: #ff4444;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #ff6666, 0 0 40px #ff0000;
+}
 
-        section {
-            padding: 50px 20px;
-        }
+h1 {
+    font-size: 55px;
+    margin: 0;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 15px #ff0000, 0 0 20px #ff4444;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
 
-        .card {
-            background: #1c1c1c;
-            margin: 20px auto;
-            max-width: 700px;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+@keyframes titleGlow {
+    0% { text-shadow: 3px 3px 15px #ff0000, 0 0 20px #ff4444; }
+    100% { text-shadow: 3px 3px 25px #ff8800, 0 0 40px #ff5500; }
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
-        }
+h2 {
+    color: #ff6666;
+    margin-top: 15px;
+    text-shadow: 2px 2px 10px #ff0000, 0 0 10px #ff4444;
+}
 
-        a {
-            color: #ff4444;
-            text-decoration: none;
-            font-weight: bold;
-        }
+section {
+    padding: 50px 20px;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+.card {
+    background: linear-gradient(145deg, #1c1c1c, #2a2a2a);
+    margin: 25px auto;
+    max-width: 750px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
 
-        p {
-            margin: 15px 0;
-            font-size: 18px;
-        }
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 60px rgba(255,0,0,0.8), 0 0 80px rgba(255,140,0,0.6);
+}
 
-        footer {
-            background: #000;
-            padding: 20px;
-            font-size: 14px;
-            color: #aaa;
-            border-top: 1px solid #ff4444;
-        }
+a {
+    color: #ff6666;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
 
-        /* Animation de fond subtil */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(255,0,0,0.1), transparent 70%);
-            animation: moveBg 20s linear infinite;
-            z-index: -1;
-        }
+a:hover {
+    color: #ff8800;
+    text-decoration: underline;
+}
 
-        @keyframes moveBg {
-            0% { transform: translate(0,0); }
-            50% { transform: translate(50px,50px); }
-            100% { transform: translate(0,0); }
-        }
+p {
+    margin: 15px 0;
+    font-size: 18px;
+}
 
-        /* Styles pour les images */
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
+footer {
+    background: #000;
+    padding: 20px;
+    font-size: 14px;
+    color: #aaa;
+    border-top: 2px solid #ff4444;
+    box-shadow: 0 -5px 25px rgba(255, 0, 0, 0.5);
+}
 
-        .gallery img {
-            width: 300px;
-            border-radius: 15px;
-            border: 3px solid #ff4444;
-            box-shadow: 0 0 20px rgba(255,0,0,0.5);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+/* Section Contact Professionnel */
+.contact-section {
+    background: linear-gradient(135deg, #111, #1f1f1f);
+    margin: 30px auto;
+    max-width: 750px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(255,0,0,0.6), 0 0 80px rgba(255,140,0,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        .gallery img:hover {
-            transform: scale(1.05) rotate(-2deg);
-            box-shadow: 0 0 30px rgba(255,0,0,0.8);
-        }
-    </style>
+.contact-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 70px rgba(255,0,0,0.9), 0 0 90px rgba(255,140,0,0.7);
+}
+
+.contact-section a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 40px;
+    background: linear-gradient(90deg, #b30000, #ff5500);
+    color: #fff;
+    border-radius: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s;
+    box-shadow: 0 0 25px rgba(255,0,0,0.5), 0 0 30px rgba(255,140,0,0.5);
+}
+
+.contact-section a:hover {
+    background: linear-gradient(90deg, #ff0000, #ff8800);
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 0 50px rgba(255,0,0,0.9), 0 0 60px rgba(255,140,0,0.8);
+}
+
+/* Section Médias */
+.media-section {
+    background: linear-gradient(135deg, #1a1a1a, #111);
+    margin: 30px auto;
+    max-width: 750px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.media-section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 60px rgba(255,0,0,0.7), 0 0 70px rgba(255,140,0,0.5);
+}
+
+.media-section a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 30px;
+    background: linear-gradient(90deg, #b30000, #ff5500);
+    color: #fff;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.media-section a:hover {
+    background: linear-gradient(90deg, #ff0000, #ff8800);
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255,0,0,0.9), 0 0 50px rgba(255,140,0,0.8);
+}
+
+/* Section Discord en bas */
+.bottom-discord {
+    background: linear-gradient(90deg, #330000, #660000);
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 750px;
+    border-radius: 20px;
+    box-shadow: 0 0 60px rgba(255,0,0,0.7);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bottom-discord a {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff0000, #ff8800);
+    border-radius: 15px;
+    text-decoration: none;
+    box-shadow: 0 0 30px rgba(255,0,0,0.7), 0 0 40px rgba(255,140,0,0.6);
+    transition: all 0.3s;
+}
+
+.bottom-discord a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(255,0,0,1), 0 0 60px rgba(255,140,0,0.9);
+}
+</style>
 </head>
 <body>
 
@@ -144,57 +242,34 @@
         <p>Josef_Cesar : Toujours prêt à soutenir et guider les membres dans chaque projet.</p>
     </div>
 
-    <div class="card">
-        <h2>Famille n°1</h2>
-        <p>Dans le serveur <strong>New Life Roleplay</strong>, La Famille Cesar est active depuis 2021. La famille reste très respectée pour sa loyauté, son unité et sa discipline.</p>
-        <p>Les membres collaborent sur divers projets, événements et activités en ligne, créant ainsi une communauté forte et soudée.</p>
-        <p>Le respect et la solidarité sont les piliers de chaque interaction au sein de la famille.</p>
-        <a href="https://discord.gg/bruTYpFevB" target="_blank">Discord Cesar Family 1</a> | 
+    <!-- Section Médias -->
+    <div class="media-section">
+        <h2>Médias de la Famille Cesar</h2>
+        <p>Retrouvez la famille sur Discord et YouTube :</p>
+        <a href="https://discord.gg/bruTYpFevB" target="_blank">Discord Cesar Family 1</a>
         <a href="https://discord.gg/NBedPgGuZe" target="_blank">Discord Cesar Family 2</a>
-        <br>
         <a href="https://youtube.com/@cesar_family?si=zucUyUFK-O-Id7JO" target="_blank">Chaîne YouTube</a>
     </div>
 
-    <div class="card">
-        <h2>À propos de la famille</h2>
-        <p>La Famille Cesar est reconnue pour son engagement, sa solidarité et sa passion pour le jeu et la communauté. Chaque membre apporte ses talents uniques pour renforcer l’unité et l’influence de la famille.</p>
-        <p>Les activités incluent des événements communautaires, des compétitions et des projets créatifs qui permettent de rassembler tous les membres autour de valeurs communes.</p>
-        <p>Rejoindre la Cesar Family, c’est entrer dans une communauté où l’amitié, la loyauté et le respect sont au cœur de chaque action.</p>
+    <!-- Section Contact Professionnel -->
+    <div class="contact-section">
+        <h2>Entrer dans la Famille Cesar</h2>
+        <p>Pour rejoindre la famille Cesar et faire un test, contactez <strong>Assil_Cesar</strong> sur Discord <strong>(username: cesar_ftw)</strong>.</p>
+        
     </div>
 
-    <!-- Section galerie avec images -->
-    <div class="card">
-        <h2>Galerie / Photos</h2>
-        <div class="gallery">
-            <img src="/cesarss/c0.png" alt="Photo Cesar Family 1">
-            <img src="/cesarss/c1.png" alt="Photo Cesar Family 2">
-            <img src="/cesarss/c2.png" alt="Photo Cesar Family 3">
-            <img src="/cesarss/c3.png*" alt="Photo Cesar Family 4">
-            <img src="/cesarss/c4.png" alt="Photo Cesar Family 5">
-            <img src="/cesarss/c5.png" alt="Photo Cesar Family 6">
-            <img src="/cesarss/c6.png" alt="Photo Cesar Family 7">
-            <img src="/cesarss/c7.png" alt="Photo Cesar Family 8">
-            <img src="/cesarss/c8.png" alt="Photo Cesar Family 9">
-            <img src="/cesarss/c9.png" alt="Photo Cesar Family 10">
-            <img src="/cesarss/c10.png" alt="Photo Cesar Family 11">
-            <img src="/cesarss/c11.png" alt="Photo Cesar Family 12">
-            <img src="/cesarss/c12.png" alt="Photo Cesar Family 13">
-            <img src="/cesarss/c13.png" alt="Photo Cesar Family 14">
-            <img src="/cesarss/c14.png" alt="Photo Cesar Family 15">
-        </div>
+    <!-- Section Discord en bas -->
+    <div class="bottom-discord">
+        <h2>Rejoindre Discord New Life Roleplay</h2>
+        <a href="https://discord.gg/qz7qYmptv9" target="_blank">Discord New Life Roleplay</a>
     </div>
+
 </section>
 
 <footer>
     © 2026 Cesar Family — Tous droits réservés
 </footer>
 
-</body>
-</html>
-
-
-</body>
-</html>
 
 </body>
 </html>
