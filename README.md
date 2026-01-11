@@ -13,4 +13,4 @@ La Cesar Family est une communauté de joueurs RP active depuis 2021, basée sur
 ## Contenu du site
 - Présentation des membres (Grands-Pères, Pères, Famille n°1)  
 - Galerie de photos  
-- Informations sur les valeurs et activités de la famille
+- Informations sur les valeurs et activités de la famille .
