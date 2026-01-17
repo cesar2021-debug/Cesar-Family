@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Cesar Family</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: radial-gradient(circle at top, #0b1020, #05070f);
+    color: #e5e7eb;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(90deg, #1e1b4b, #0f172a);
+    padding: 80px 20px;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #38bdf8, transparent);
+}
+
+h1 {
+    font-size: 52px;
+    color: #e0e7ff;
+    letter-spacing: 3px;
+    text-shadow: 0 0 25px rgba(56,189,248,0.6);
+}
+
+h2 {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 60px 20px;
+}
+
+/* ===== CARDS ===== */
+.card, .media-section, .contact-section, .values-section, .application-section {
+    background: linear-gradient(145deg, rgba(15,23,42,0.95), rgba(2,6,23,0.95));
+    max-width: 800px;
+    margin: 35px auto;
+    padding: 45px;
+    border-radius: 20px;
+    border: 1px solid rgba(99,102,241,0.25);
+    box-shadow:
+        0 0 30px rgba(56,189,248,0.15),
+        inset 0 0 20px rgba(99,102,241,0.08);
+    transition: all 0.4s ease;
+}
+
+.card:hover,
+.media-section:hover,
+.contact-section:hover,
+.values-section:hover,
+.application-section:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 0 45px rgba(56,189,248,0.35),
+        0 0 70px rgba(99,102,241,0.25);
+}
+
+/* ===== TITLES ===== */
+.card h2,
+.media-section h2,
+.contact-section h2,
+.values-section h2,
+.application-section h2 {
+    color: #a5b4fc;
+    margin-bottom: 20px;
+}
+
+/* ===== TEXT ===== */
+p {
+    font-size: 17px;
+    color: #c7d2fe;
+}
+
+/* ===== BUTTONS ===== */
+a {
+    display: inline-block;
+    margin: 14px;
+    padding: 15px 42px;
+    background: linear-gradient(90deg, #6366f1, #38bdf8);
+    color: #020617;
+    border-radius: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.35s ease;
+    box-shadow: 0 0 25px rgba(56,189,248,0.4);
+}
+
+a:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow:
+        0 0 40px rgba(56,189,248,0.8),
+        0 0 60px rgba(99,102,241,0.6);
+}
+
+/* ===== FORM ===== */
+form {
+    margin-top: 25px;
+}
+
+form input,
+form textarea,
+form select {
+    width: 90%;
+    max-width: 520px;
+    margin: 12px auto;
+    padding: 15px;
+    border-radius: 14px;
+    border: 1px solid rgba(99,102,241,0.4);
+    background: rgba(2,6,23,0.9);
+    color: #e5e7eb;
+    font-size: 15px;
+    display: block;
+    outline: none;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #94a3b8;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px rgba(56,189,248,0.6);
+}
+
+form button {
+    margin-top: 20px;
+    padding: 15px 55px;
+    background: linear-gradient(90deg, #6366f1, #38bdf8);
+    color: #020617;
+    border: none;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px rgba(56,189,248,0.9);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 60px;
+    padding: 25px;
+    font-size: 14px;
+    color: #94a3b8;
+    border-top: 1px solid rgba(99,102,241,0.25);
+    background: #020617;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>The Cesar Family</h1>
+    <h2>Unity • Loyalty • Respect</h2>
+</header>
+
+<section>
+
+    <div class="card">
+        <h2>Grandfathers</h2>
+        <p><strong>Assil_Cesar</strong> — The patriarch, wisdom and authority.</p>
+        <p><strong>Kounfa_Cesar</strong> — A respected pillar, loyalty and honor.</p>
+    </div>
+
+    <div class="card">
+        <h2>Father</h2>
+        <p><strong>Pabloo_Cesar</strong> — Leader of the new generation, vision and control.</p>
+    </div>
+
+    <div class="values-section">
+        <h2>Family Values</h2>
+        <p>• Respect and honor</p>
+        <p>• Loyalty above all</p>
+        <p>• Discipline and strategy</p>
+        <p>• Family comes first</p>
+    </div>
+
+    <div class="media-section">
+        <h2>Official Media</h2>
+        <a href="https://discord.gg/bruTYpFevB" target="_blank">Discord Family 1</a>
+        <a href="https://discord.gg/NBedPgGuZe" target="_blank">Discord Family 2</a>
+        <a href="https://youtube.com/@cesar_family" target="_blank">YouTube Channel</a>
+    </div>
+
+    <!-- ===== APPLICATION FORM ===== -->
+    <div class="application-section">
+        <h2>Join the Cesar Family</h2>
+        <p>Fill out this application to join the family.</p>
+
+        <form id="applicationForm">
+            <input type="text" name="realname" placeholder="Name in real life" required>
+            <input type="text" name="gamename" placeholder="Name in game" required>
+            <input type="text" name="discord" placeholder="Discord Username" required>
+            <textarea name="reason" placeholder="Why do you want to join the Cesar Family?" rows="4" required></textarea>
+            <input type="number" name="age" placeholder="Age" required>
+            <select name="device" required>
+                <option value="">PC or Mobile?</option>
+                <option value="PC">PC</option>
+                <option value="Mobile">Mobile</option>
+            </select>
+            <select name="samp" required>
+                <option value="">Have you played SA-MP before?</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <button type="submit">Send Application</button>
+        </form>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 The Cesar Family — All rights reserved
+</footer>
+
+<!-- ===== JS for Discord Webhook ===== -->
+<script>
+const webhookURL = "https://discord.com/api/webhooks/1462066116267348162/5cURrMKCtVslQp-ShtXBTAEBtWo_5wlnWGaNM4JMm_k25RGEQlKWbQbxggJVfRt0SiLN";
+
+document.getElementById("applicationForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    const message = {
+        content:
+        "**📥 New Cesar Family Application**\n\n" +
+        "**👤 Real Name:** " + data.get("realname") + "\n" +
+        "**🎮 Game Name:** " + data.get("gamename") + "\n" +
+        "**💬 Discord:** " + data.get("discord") + "\n" +
+        "**📝 Reason:** " + data.get("reason") + "\n" +
+        "**🎂 Age:** " + data.get("age") + "\n" +
+        "**💻 Device:** " + data.get("device") + "\n" +
+        "**🕹️ SA-MP:** " + data.get("samp")
+    };
+
+    fetch(webhookURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(message)
+    }).then(() => {
+        alert("✅ Application sent successfully!");
+        form.reset();
+    }).catch(() => {
+        alert("❌ Error sending application.");
+    });
+});
+</script>
+
+</body>
+</html>
