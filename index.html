@@ -4,23 +4,27 @@
 <meta charset="UTF-8">
 <title>The Cesar Family - Ramadan Karim</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
+
 /* ===== GLOBAL ===== */
 body, html{
-    margin:0; padding:0;
+    margin:0;
+    padding:0;
     font-family:"Poppins", Arial, sans-serif;
-    background:#100020;
-    color:#f5f5f5;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-attachment: fixed;
+    color:#ffffff;
     text-align:center;
     overflow-x:hidden;
 }
 
-/* ===== LOADING SCREEN ===== */
+/* ===== LOADING ===== */
 #loadingScreen{
     position:fixed;
     top:0; left:0;
     width:100vw; height:100vh;
-    background:linear-gradient(135deg,#6b21a8,#3b82f6,#facc15,#10b981);
+    background:linear-gradient(135deg,#141e30,#243b55,#d4af37);
     background-size:400% 400%;
     display:flex;
     flex-direction:column;
@@ -29,22 +33,24 @@ body, html{
     color:white;
     font-size:36px;
     z-index:9999;
-    animation:gradientMove 10s ease infinite;
+    animation:gradientMove 8s ease infinite;
 }
+
 #loadingBar{
     width:70%;
     height:25px;
-    background:rgba(0,0,0,0.3);
+    background:rgba(0,0,0,0.4);
     border-radius:15px;
     margin-top:20px;
     overflow:hidden;
 }
+
 #loadingFill{
     width:0%;
     height:100%;
     border-radius:15px;
-    background: linear-gradient(90deg, #d2ff4b, #00d3b6, #5f9c3d, #d2ff4b); /* couleur comme ton image */
-    background-size: 200% 100%;
+    background: linear-gradient(90deg,#00f5ff,#d4af37,#00f5ff);
+    background-size:200% 100%;
     animation: moveGradient 3s linear infinite;
     transition:width 0.2s;
 }
@@ -54,6 +60,7 @@ body, html{
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
+
 @keyframes moveGradient{
     0%{background-position:0% 0%;}
     100%{background-position:200% 0%;}
@@ -63,44 +70,28 @@ body, html{
 header{
     padding:120px 20px;
     position:relative;
-    overflow:hidden;
-    display:none; 
+    display:none;
 }
-.header-bg{
-    position:absolute; inset:0;
-    background:linear-gradient(-45deg,#6b21a8,#3b82f6,#10b981,#facc15);
-    background-size:400% 400%;
-    animation:gradientMove 12s ease infinite;
-    z-index:-1;
-}
+
 .neon-title{
     font-size:60px;
-    color:#fff;
-    text-shadow:0 0 10px #fff,0 0 20px #3b82f6,0 0 40px #6b21a8,0 0 60px #10b981;
-    animation: glow 2s infinite alternate;
+    color:white;
+    text-shadow:0 0 15px #00f5ff,0 0 30px #d4af37;
 }
-@keyframes glow{
-    0%{text-shadow:0 0 10px #fff,0 0 20px #3b82f6;}
-    50%{text-shadow:0 0 20px #6b21a8,0 0 40px #10b981;}
-    100%{text-shadow:0 0 10px #facc15,0 0 20px #3b82f6;}
-}
+
 .subtitle{
-    color:#facc15;
+    color:#d4af37;
     font-size:22px;
-    animation:pulseText 2s infinite alternate;
-}
-@keyframes pulseText{
-    from{opacity:0.8;}
-    to{opacity:1;}
 }
 
 /* ===== PARTICLES ===== */
 .particle{
     position:absolute;
-    width:12px; height:12px;
+    width:8px;
+    height:8px;
     border-radius:50%;
-    background:linear-gradient(45deg,#facc15,#3b82f6,#10b981);
-    opacity:0.8;
+    background:#00f5ff;
+    opacity:0.7;
     pointer-events:none;
 }
 
@@ -110,52 +101,44 @@ header{
     margin:50px auto;
     padding:45px;
     border-radius:25px;
-    background:rgba(20,10,30,0.9);
-    border:1px solid rgba(250,205,21,0.5);
-    box-shadow:0 0 40px rgba(250,205,21,0.2);
-    transition:0.5s ease;
-    display:none; 
+    background:rgba(0,0,0,0.6);
+    border:1px solid rgba(212,175,55,0.6);
+    box-shadow:0 0 40px rgba(0,245,255,0.2);
+    transition:0.5s;
+    display:none;
 }
+
 .card:hover,.music-section:hover,.application-section:hover,.media-section:hover{
-    transform:translateY(-10px) scale(1.02) rotateZ(1deg);
-    box-shadow:0 0 60px #facc15,0 0 100px #3b82f6;
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 0 60px #d4af37;
 }
-.card h2::after,.music-section h2::after,.application-section h2::after{
-    content:"";
-    display:block;
-    width:100px;
-    height:3px;
-    margin:12px auto;
-    background:linear-gradient(90deg,transparent,gold,transparent);
+
+h2{
+    color:#00f5ff;
 }
-p{ color:#f5f5dc; font-size:16px; }
+
+p{
+    color:#f5f5f5;
+}
 
 /* ===== BUTTONS ===== */
 a,button{
     display:inline-block;
     margin:12px;
-    padding:14px 40px;
-    background:linear-gradient(135deg,#facc15,#b45309);
-    color:white;
+    padding:14px 35px;
+    background:linear-gradient(135deg,#00f5ff,#d4af37);
+    color:black;
     border-radius:20px;
     font-weight:600;
     text-decoration:none;
     border:none;
     cursor:pointer;
     transition:0.3s;
-    box-shadow:0 0 25px gold;
 }
+
 a:hover,button:hover{
-    transform:scale(1.15);
-    box-shadow:0 0 50px #facc15,0 0 80px #3b82f6;
-}
-.music-btn{
-    background:linear-gradient(135deg,#facc15,#3b82f6);
-    animation:pulse 2s infinite alternate;
-}
-@keyframes pulse{
-    from{ box-shadow:0 0 20px gold;}
-    to{ box-shadow:0 0 45px #3b82f6;}
+    transform:scale(1.1);
+    box-shadow:0 0 30px #00f5ff;
 }
 
 /* ===== FORM ===== */
@@ -165,87 +148,93 @@ form input,form textarea,form select{
     margin:12px auto;
     padding:15px;
     border-radius:15px;
-    border:1px solid rgba(250,205,21,0.5);
-    background:rgba(0,0,0,0.85);
-    color:#f5f5dc;
+    border:1px solid #d4af37;
+    background:rgba(0,0,0,0.8);
+    color:white;
     display:block;
 }
+
 form input:focus,form textarea:focus,form select:focus{
     outline:none;
-    box-shadow:0 0 25px gold;
+    box-shadow:0 0 15px #00f5ff;
 }
 
 /* ===== FOOTER ===== */
 footer{
     padding:30px;
     font-size:14px;
-    color:#f5f5dc;
-    border-top:1px solid rgba(250,205,21,0.5);
-    background:#100020;
-    display:none; 
+    color:#ccc;
+    border-top:1px solid #d4af37;
+    background:#111;
+    display:none;
 }
+
 </style>
 </head>
+
 <body>
 
-<!-- LOADING SCREEN -->
 <div id="loadingScreen">
-    🌙 Ramadan Karim 🌙
-    <div id="loadingBar"><div id="loadingFill"></div></div>
+🌙 Ramadan Karim 🌙
+<div id="loadingBar"><div id="loadingFill"></div></div>
 </div>
 
 <header>
-    <div class="header-bg"></div>
-    <h1 class="neon-title">THE CESAR FAMILY</h1>
-    <h2 class="subtitle">Unity • Loyalty • Respect</h2>
+<h1 class="neon-title">THE CESAR FAMILY</h1>
+<h2 class="subtitle">Unity • Loyalty • Respect</h2>
 </header>
 
 <section>
+
 <div class="card">
-    <h2>Grandfathers</h2>
-    <p><strong>Assil_Cesar</strong> — Patriarch</p>
-    <p><strong>Kounfa_Cesar</strong> — Leader & Honor</p>
+<h2>Grandfathers</h2>
+<p><strong>Assil_Cesar</strong> — Patriarch</p>
+<p><strong>Kounfa_Cesar</strong> — Leader & Honor</p>
 </div>
 
 <div class="card">
-    <h2>Fathers</h2>
-    <p><strong>Pabloo_Cesar</strong> — Leader</p>
-    <p><strong>Josef_Cesar</strong> — Protection</p>
-    <p><strong>Gumball_Cesar</strong> — Strategy</p>
+<h2>Fathers</h2>
+<p><strong>Pabloo_Cesar</strong> — Leader</p>
+<p><strong>Josef_Cesar</strong> — Protection</p>
+<p><strong>Gumball_Cesar</strong> — Strategy</p>
 </div>
 
 <div class="music-section">
-    <h2>🎵 Cesar Music</h2>
-    <p>🔥 On Est Là</p>
-    <a class="music-btn" href="https://youtu.be/YYtF0DpIjnQ" target="_blank">▶ Listen Now</a>
-    <p>🔥 No Mercy</p>
-    <a class="music-btn" href="https://youtu.be/6S-N7mUZqD0" target="_blank">▶ Listen Now</a>
+<h2>🎵 Cesar Music</h2>
+<p>🔥 On Est Là</p>
+<a href="https://youtu.be/YYtF0DpIjnQ" target="_blank">▶ Listen Now</a>
+<p>🔥 No Mercy</p>
+<a href="https://youtu.be/6S-N7mUZqD0" target="_blank">▶ Listen Now</a>
 </div>
 
 <div class="media-section">
-    <h2>Official Media</h2>
-    <a href="https://discord.gg/bruTYpFevB" target="_blank">Discord 1</a>
-    <a href="https://discord.gg/NBedPgGuZe" target="_blank">Discord 2</a>
-    <a href="https://youtube.com/@cesar_family" target="_blank">YouTube</a>
+<h2>Official Media</h2>
+<a href="https://discord.gg/bruTYpFevB" target="_blank">Discord 1</a>
+<a href="https://discord.gg/NBedPgGuZe" target="_blank">Discord 2</a>
+<a href="https://youtube.com/@cesar_family" target="_blank">YouTube</a>
 </div>
 
 <div class="application-section">
-    <h2>Join The Cesar Family</h2>
-    <form id="applicationForm">
-        <input type="text" placeholder="Real Name" required>
-        <input type="text" placeholder="Game Name" required>
-        <input type="text" placeholder="Discord Username" required>
-        <textarea placeholder="Why do you want to join?" rows="4" required></textarea>
-        <input type="number" placeholder="Age" required>
-        <select id="deviceSelect" required>
-            <option value="">PC or Mobile?</option>
-            <option value="PC">PC</option>
-            <option value="Mobile">Mobile</option>
-        </select>
-        <select id="platformSelect" required style="display:none;"></select>
-        <button type="submit">Send Application</button>
-    </form>
+<h2>Join The Cesar Family</h2>
+<form id="applicationForm">
+<input type="text" placeholder="Real Name" required>
+<input type="text" placeholder="Game Name" required>
+<input type="text" placeholder="Discord Username" required>
+<textarea placeholder="Why do you want to join?" rows="4" required></textarea>
+<input type="number" placeholder="Age" required>
+
+<select id="deviceSelect" required>
+<option value="">PC or Mobile?</option>
+<option value="PC">PC</option>
+<option value="Mobile">Mobile</option>
+</select>
+
+<select id="platformSelect" required style="display:none;"></select>
+
+<button type="submit">Send Application</button>
+</form>
 </div>
+
 </section>
 
 <footer>
@@ -253,69 +242,56 @@ footer{
 </footer>
 
 <script>
-// ===== LOADING ANIMATION =====
-let loadingFill=document.getElementById("loadingFill");
-let loadingScreen=document.getElementById("loadingScreen");
+
+/* LOADING */
 let percent=0;
 let loadingInterval=setInterval(()=>{
-    percent+=1;
-    loadingFill.style.width=percent+"%";
-    if(percent>=100){
-        clearInterval(loadingInterval);
-        loadingScreen.style.display="none";
-        document.querySelector("header").style.display="block";
-        document.querySelectorAll(".card, .music-section, .media-section, .application-section").forEach(el=>el.style.display="block");
-        document.querySelector("footer").style.display="block";
-    }
-},30);
-
-// PLATFORM LOGIC
-const deviceSelect=document.getElementById("deviceSelect");
-const platformSelect=document.getElementById("platformSelect");
-deviceSelect.addEventListener("change",function(){
-    if(this.value==="PC"){
-        platformSelect.style.display="block";
-        platformSelect.innerHTML=`
-            <option value="">Which GTA Platform?</option>
-            <option value="SA-MP">SA-MP</option>
-            <option value="MTA">MTA</option>
-            <option value="FiveM">FiveM</option>
-        `;
-    } else if(this.value==="Mobile"){
-        platformSelect.style.display="block";
-        platformSelect.innerHTML=`<option value="SA-MP" selected>SA-MP</option>`;
-    } else{
-        platformSelect.style.display="none";
-        platformSelect.innerHTML="";
-    }
-});
-
-// APPLICATION SUBMIT
-document.getElementById("applicationForm").addEventListener("submit",function(e){
-    e.preventDefault();
-    alert("Application Sent Successfully 🔥 Welcome to Cesar Family!");
-    this.reset();
-});
-
-// PARTICLES
-for(let i=0;i<40;i++){
-    let p=document.createElement("div");
-    p.className="particle";
-    p.style.left=Math.random()*100+"vw";
-    p.style.top=Math.random()*100+"vh";
-    p.style.width=(5+Math.random()*15)+"px";
-    p.style.height=p.style.width;
-    document.body.appendChild(p);
+percent+=1;
+document.getElementById("loadingFill").style.width=percent+"%";
+if(percent>=100){
+clearInterval(loadingInterval);
+loadingScreen.style.display="none";
+document.querySelector("header").style.display="block";
+document.querySelectorAll(".card,.music-section,.media-section,.application-section").forEach(el=>el.style.display="block");
+document.querySelector("footer").style.display="block";
 }
-document.addEventListener("mousemove",e=>{
-    document.querySelectorAll(".particle").forEach(p=>{
-        let speed=0.05;
-        let dx=(e.clientX - window.innerWidth/2)*speed;
-        let dy=(e.clientY - window.innerHeight/2)*speed;
-        p.style.transform=`translate(${dx}px,${dy}px)`;
-    });
+},25);
+
+/* PLATFORM LOGIC */
+deviceSelect.addEventListener("change",function(){
+if(this.value==="PC"){
+platformSelect.style.display="block";
+platformSelect.innerHTML=`
+<option value="">Which GTA Platform?</option>
+<option value="SA-MP">SA-MP</option>
+<option value="MTA">MTA</option>
+<option value="FiveM">FiveM</option>
+`;
+}else if(this.value==="Mobile"){
+platformSelect.style.display="block";
+platformSelect.innerHTML=`<option value="SA-MP">SA-MP</option>`;
+}else{
+platformSelect.style.display="none";
+}
 });
+
+/* FORM */
+document.getElementById("applicationForm").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Application Sent Successfully 🔥 Welcome to Cesar Family!");
+this.reset();
+});
+
+/* PARTICLES */
+for(let i=0;i<30;i++){
+let p=document.createElement("div");
+p.className="particle";
+p.style.left=Math.random()*100+"vw";
+p.style.top=Math.random()*100+"vh";
+document.body.appendChild(p);
+}
+
 </script>
 
 </body>
-</html>
+</html>ss
